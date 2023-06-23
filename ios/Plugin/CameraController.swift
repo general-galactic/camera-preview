@@ -60,7 +60,13 @@ extension CameraController {
                     self.rearCamera = camera
 
                     try camera.lockForConfiguration()
+                    
+                    if camera.isFocusPointOfInterestSupported {
+                        device.focusPointOfInterest = CGPointMake(0.5, 0.5)
+                    }
+                    
                     camera.focusMode = .continuousAutoFocus
+                    
                     camera.unlockForConfiguration()
                 }
             }
