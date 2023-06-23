@@ -54,7 +54,7 @@
     "dist/",
     "ios/",
     "android/",
-    "CapacitorCommunityCameraPreview.podspec"
+    "GeneralGalacticCameraPreview.podspec"
   ],
   "keywords": [
     "capacitor",
@@ -76,10 +76,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/capacitor-community/camera-preview.git"
+    "url": "https://github.com/general-galactic/camera-preview.git"
   },
   "bugs": {
-    "url": "https://github.com/capacitor-community/camera-preview/issues"
+    "url": "https://github.com/general-galactic/camera-preview/issues"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
