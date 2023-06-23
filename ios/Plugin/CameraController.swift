@@ -46,7 +46,7 @@ extension CameraController {
 
         func configureCaptureDevices() throws {
 
-            let session = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInTripleCamera, .builtInDualCamera, .builtInWideAngleCamera], mediaType: AVMediaType.video, position: .unspecified)
+            let session = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInTripleCamera, .builtInDualCamera, .builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back)
 
             let cameras = session.devices.compactMap { $0 }
             guard !cameras.isEmpty else { throw CameraControllerError.noCamerasAvailable }
@@ -58,15 +58,12 @@ extension CameraController {
 
                 if camera.position == .back {
                     self.rearCamera = camera
-
+                    print("rear camera \(camera.debugDescription)")
+                    
                     try camera.lockForConfiguration()
-                    
-                    if camera.isFocusPointOfInterestSupported {
-                        camera.focusPointOfInterest = CGPointMake(0.5, 0.5)
-                    }
-                    
                     camera.focusMode = .continuousAutoFocus
                     camera.exposureMode = .continuousAutoExposure
+                    camera.isSmoothAutoFocusEnabled = true
                     
                     camera.unlockForConfiguration()
                 }
