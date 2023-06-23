@@ -12,3 +12,4 @@ ios/Plugin.xcworkspace/xcuserdata
 dist/
 .DS_Store
 .husky/
+/ios/Plugin.xcodeproj/project.xcworkspace/xcuserdata/josh.xcuserdatad/UserInterfaceState.xcuserstate
