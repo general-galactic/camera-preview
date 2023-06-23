@@ -1,5 +1,5 @@
 {
-  "name": "@capacitor-community/camera-preview",
+  "name": "@general-galactic/camera-preview",
   "version": "5.0.0",
   "description": "Camera preview",
   "main": "dist/plugin.cjs.js",
@@ -80,5 +80,8 @@
   },
   "bugs": {
     "url": "https://github.com/capacitor-community/camera-preview/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
