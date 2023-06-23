@@ -52,11 +52,11 @@ extension CameraController {
             guard !cameras.isEmpty else { throw CameraControllerError.noCamerasAvailable }
 
             for camera in cameras {
-                if camera.position == .front {
+                if self.frontCamera == nil && camera.position == .front {
                     self.frontCamera = camera
                 }
 
-                if camera.position == .back {
+                if self.rearCamera == nil && camera.position == .back {
                     self.rearCamera = camera
                     print("rear camera \(camera.debugDescription)")
                     
