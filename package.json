@@ -1,6 +1,6 @@
 {
   "name": "@general-galactic/camera-preview",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "Camera preview",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
